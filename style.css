@@ -1,221 +1,213 @@
-/* ---------------------------------------------------------
-   GLOBAL LAYOUT & TYPOGRAPHY
---------------------------------------------------------- */
+/* ----------------------------------------------------------
+   GLOBAL STYLES
+---------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 body {
-    background: #eef1f5;
-    color: #333;
+    background: #eef3fb;
+    color: #1a1a1a;
     line-height: 1.7;
 }
 
-/* ---------------------------------------------------------
+/* ----------------------------------------------------------
    NAVIGATION BAR
---------------------------------------------------------- */
+---------------------------------------------------------- */
 nav {
-    background: #ffffff;
-    padding: 12px 40px;
+    background: linear-gradient(90deg, #0b1e3f, #253f85);
+    padding: 20px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: white;
     position: sticky;
     top: 0;
     z-index: 200;
 }
 
+nav .logo-area {
+    display: flex;
+    align-items: center;
+}
+
 nav img {
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
-    border: 2px solid #005bbb;
+    margin-right: 12px;
+    border: 2px solid #ffffff99;
+}
+
+nav .name {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 30px;
+    display: flex;
+    gap: 35px;
 }
 
 nav ul li a {
     text-decoration: none;
+    color: #cfd7f3;
     font-size: 17px;
-    color: #222;
-    font-weight: 600;
-    padding-bottom: 4px;
     transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #005bbb;
-    border-bottom: 2px solid #005bbb;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
-    color: #005bbb;
-    border-bottom: 2px solid #005bbb;
+    color: white;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #ff914d;
 }
 
-/* ---------------------------------------------------------
-   HERO SECTION (HOME PAGE)
---------------------------------------------------------- */
+/* ----------------------------------------------------------
+   HERO SECTION (Homepage)
+---------------------------------------------------------- */
 .hero {
+    padding: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 10%;
-    background: linear-gradient(120deg, #005bbb, #003f88);
-    color: white;
 }
 
-.hero-left h1 {
+.hero-left {
+    width: 55%;
+}
+
+.hero-left .badge {
+    background: #dafbe1;
+    color: #0f6d2e;
+    padding: 6px 15px;
+    width: fit-content;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #b6f0c7;
+}
+
+.hero h1 {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
-.hero-left p {
-    margin-top: 12px;
-    font-size: 20px;
-    opacity: 0.9;
+.hero h1 span {
+    color: #3f8cff;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #334;
 }
 
 .hero-right img {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    border-radius: 30px;
     object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 26px rgba(0,0,0,0.2);
 }
 
-/* ---------------------------------------------------------
-   PAGE HEADERS (ABOUT, PUBLICATIONS, PROJECTS)
---------------------------------------------------------- */
-header {
-    padding: 60px 20px;
-    text-align: center;
-    background: linear-gradient(120deg, #005bbb, #003f88);
+/* ----------------------------------------------------------
+   BUTTONS
+---------------------------------------------------------- */
+.btn-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(120deg, #1db954, #17823b);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.btn-outline {
+    border: 2px solid #1db954;
+    background: transparent;
+    color: #1db954;
+}
+
+.btn-outline:hover {
+    background: #1db954;
     color: white;
 }
 
-header h1 {
-    font-size: 36px;
-    font-weight: 700;
-}
-
-/* ---------------------------------------------------------
-   CONTENT SECTIONS (CARDS)
---------------------------------------------------------- */
+/* ----------------------------------------------------------
+   CARD SECTIONS
+---------------------------------------------------------- */
 .container {
-    padding: 50px 10%;
+    padding: 40px 80px;
 }
 
-.section {
-    background: white;
-    padding: 35px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
 }
 
-.section:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 22px rgba(0,0,0,0.12);
-}
-
-.section h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #003f88;
-    border-left: 5px solid #005bbb;
-    padding-left: 12px;
-}
-
-/* ---------------------------------------------------------
-   LIST STYLING
---------------------------------------------------------- */
-ul {
-    margin-left: 25px;
-    padding-left: 5px;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-/* ---------------------------------------------------------
-   CONTACT PAGE
---------------------------------------------------------- */
-.section p {
-    font-size: 17px;
-    margin-bottom: 10px;
-}
-
-/* ---------------------------------------------------------
-   FOOTER
---------------------------------------------------------- */
-footer {
-    background: #003f88;
+.card {
+    background: #0b1e3f;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-    letter-spacing: 0.8px;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+    border: 1px solid #445d95;
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE DESIGN
---------------------------------------------------------- */
-@media (max-width: 900px) {
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
 
+.card ul {
+    margin-left: 20px;
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+---------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #0b1e3f;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------------- */
+@media (max-width: 900px) {
+    nav {
+        padding: 20px;
+    }
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 60px 20px;
     }
-
-    .hero-right img {
-        margin-top: 25px;
-        width: 200px;
-        height: 200px;
+    .hero-left, .hero-right {
+        width: 100%;
     }
-
-    nav ul li {
-        margin-left: 15px;
-    }
-
-    .container {
-        padding: 40px 5%;
-    }
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    nav ul {
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin-left: 12px;
-    }
-
-    header h1 {
-        font-size: 28px;
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
