@@ -1,30 +1,39 @@
-/* ========= Global Style ========= */
+/* ---------------------------------------------------------
+   GLOBAL STYLE – Professional Modern Portfolio
+--------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
 body {
-    background: #f5f7fa;
-    color: #222;
-    line-height: 1.6;
+    background: #eef1f5;
+    color: #333;
+    line-height: 1.7;
 }
 
-/* ========= Navbar ========= */
+/* ---------------------------------------------------------
+   NAVIGATION BAR
+--------------------------------------------------------- */
 nav {
-    background: #122044;
-    padding: 15px;
+    background: #ffffff;
+    padding: 12px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav img {
-    height: 50px;
-    width: 50px;
+    height: 52px;
+    width: 52px;
     border-radius: 50%;
+    border: 2px solid #005bbb;
 }
 
 nav ul {
@@ -33,66 +42,97 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 35px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
     font-size: 17px;
-    font-weight: 500;
+    color: #222;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00c4ff;
+    color: #005bbb;
+    border-bottom: 2px solid #005bbb;
+    padding-bottom: 4px;
 }
 
-/* ========= Header ========= */
+/* ---------------------------------------------------------
+   HEADER BANNER
+--------------------------------------------------------- */
 header {
-    padding: 60px;
+    padding: 90px 20px;
     text-align: center;
-    background: #1a2a6c;
-    background: linear-gradient(45deg, #1a2a6c, #4e4376, #2c5364);
+    background: linear-gradient(120deg, #005bbb, #003f88);
     color: white;
 }
 
 header h1 {
-    font-size: 42px;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 header p {
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 15px;
+    font-size: 1.3rem;
+    opacity: 0.9;
 }
 
-/* ========= Content Box ========= */
+/* ---------------------------------------------------------
+   MAIN CONTENT WRAPPER
+--------------------------------------------------------- */
 .container {
-    padding: 40px 80px;
+    padding: 50px 10%;
 }
 
 .section {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.1);
 }
 
 .section h2 {
-    margin-bottom: 15px;
-    color: #122044;
-    border-left: 5px solid #00c4ff;
-    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #003f88;
+    border-left: 5px solid #005bbb;
+    padding-left: 12px;
 }
 
+/* ---------------------------------------------------------
+   LISTS
+--------------------------------------------------------- */
 ul {
-    margin-left: 20px;
+    margin-left: 25px;
+    padding-left: 5px;
 }
 
+ul li {
+    margin-bottom: 10px;
+    font-size: 16.5px;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     margin-top: 40px;
+    background: #003f88;
     color: white;
-    background: #122044;
+    letter-spacing: 0.8px;
+    font-size: 15px;
 }
