@@ -3,47 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <title>Dr. Nivedha S – Portfolio</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <img src="profile.jpg" alt="Logo">
+    <div class="logo-area">
+        <img src="profile.jpg" alt="Profile">
+        <div class="name">Dr. Nivedha S</div>
+    </div>
+
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="experience.html">Experience</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
-<header class="hero">
+<section class="hero">
     <div class="hero-left">
-        <h1>Dr. Nivedha S</h1>
-        <p>Assistant Professor | Researcher | Photonic Crystal Fiber Specialist</p>
+
+        <div class="badge">Assistant Professor – ECE, ACET</div>
+
+        <h1>Shaping <span>future engineers</span><br>
+            through innovation, research & teaching.</h1>
+
+        <p>
+            Academician and researcher specializing in Photonic Crystal Fibers, 
+            Terahertz Sensing, and SPR Technologies. Dedicated to research excellence 
+            and student innovation.
+        </p>
+
+        <div class="btn-row">
+            <a href="about.html" class="btn">View Profile</a>
+            <a href="contact.html" class="btn btn-outline">Contact Me</a>
+        </div>
     </div>
 
     <div class="hero-right">
-        <img src="profile.jpg" alt="Profile Photo">
+        <img src="profile.jpg">
     </div>
-</header>
+</section>
 
 <div class="container">
-    <div class="section">
-        <h2>Professional Summary</h2>
-        <p>
-            Dedicated academician and researcher with a Ph.D. in Electronics Engineering, 
-            specializing in photonic crystal fiber sensors and terahertz optical sensing. 
-            Skilled in COMSOL, MATLAB, and LaTeX with a proven publication record 
-            in reputed journals and conferences. Passionate about biosensing technologies 
-            and empowering students through innovation and research.
-        </p>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Academic Snapshot</h3>
+            <ul>
+                <li>Ph.D. – Electronics Engineering (VIT University)</li>
+                <li>Research in PCF, SPR & Terahertz Sensing</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Teaching Portfolio</h3>
+            <ul>
+                <li>Optical Communication</li>
+                <li>Digital Electronics</li>
+                <li>Signals & Systems</li>
+                <li>Communication Networks</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Academic Output</h3>
+            <ul>
+                <li>Journal Publications</li>
+                <li>Conference Papers</li>
+                <li>Book Chapters</li>
+                <li>Project Guidance</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Awards & Recognition</h3>
+            <ul>
+                <li>Best Paper Awards</li>
+                <li>Research Appreciation</li>
+                <li>FDP & Workshop Achievements</li>
+            </ul>
+        </div>
+
     </div>
 </div>
 
 <footer>
-    © 2025 Dr. Nivedha S | Portfolio Website
+    © 2025 Dr. Nivedha S | Professional Portfolio
 </footer>
 
 </body>
